@@ -21,7 +21,7 @@ exports.userSignup = async (req, res) => {
     });
     return res
       .status(200)
-      .json({ message: "user created successfully", user: user });
+      .json({ message: "User created successfully", user: user });
   } catch (error) {
     console.log(error);
     return res
@@ -77,12 +77,11 @@ exports.addNote = async (req, res) => {
   try {
     // Check if user exist in database using the id verified coming from the auth middleware
     const id = req.user._id;
-    const user = await User.findById({ _id: id });
+    const user = await User.findById({_id: id});
 
-
-    // validate user
-    if(!user){
-      return res.status(401).json({message:"User is not authorized"})
+   // validate user
+    if (!user) {
+      return res.status(401).json({ message: "User is not authorized" });
     }
     const { title, description } = req.body;
     if (!title || !description)
