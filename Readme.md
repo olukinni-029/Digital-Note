@@ -36,4 +36,6 @@ A digital note for taking vital information,which has the following endpoints to
 >
 > Run: npm start
 
-[click here](https://documenter.getpostman.com/view/22272570/VUxKUpzz)
+[Postman Doc](https://documenter.getpostman.com/view/22272570/VUxKUpzz)
+
+[baseUrl](https://ndigital.herokuapp.com)
