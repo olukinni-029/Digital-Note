@@ -6,7 +6,7 @@ const jwt = require("jsonwebtoken");
 exports.userSignup = async (req, res) => {
   const { firstName, lastName, email, password, role } = req.body;
   if (!firstName || !lastName || !email || !password) {
-    res.status(403).json("input all fields");
+    res.status(400).json("input all fields");
   }
   try {
     // hashed password
